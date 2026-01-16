@@ -1,0 +1,51 @@
+/* HomePage.css */
+.home-page {
+    text-align: center;
+}
+
+.home-page h2 {
+    font-size: 1.5rem;
+    max-width: 500px;
+    margin: 1rem auto;
+    color: var(--text-color);
+    font-family: var(--font-body);
+}
+
+.home-page p {
+    max-width: 600px;
+    margin: 1rem auto 2rem auto;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px var(--deep-space-purple), -1px -1px 2px var(--deep-space-purple), 1px -1px 2px var(--deep-space-purple), -1px 1px 2px var(--deep-space-purple);
+}
+
+.cta-button {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: none;
+    background: var(--lime-green);
+    color: #1a1a2e;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px var(--lime-green);
+}
+
+.cta-button:hover {
+    background-color: var(--fluorescent-yellow);
+    box-shadow: 0 0 25px var(--fluorescent-yellow);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .home-page h1 {
+        font-size: 2.5rem;
+    }
+    .home-page h2 {
+        font-size: 1.2rem;
+    }
+    .cta-button {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+    }
+}

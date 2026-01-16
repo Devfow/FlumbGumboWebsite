@@ -1,0 +1,96 @@
+.custom-controls {
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-family: var(--font-body);
+    color: #333;
+    overflow-y: auto; /* Enable scrolling for more controls */
+    max-height: 100%; /* Ensure it doesn't overflow container */
+}
+
+.control-group {
+    margin-bottom: 15px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--deep-space-purple);
+}
+
+.color-presets {
+    display: flex;
+    gap: 10px;
+}
+
+.color-presets button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.color-presets button.active {
+    transform: scale(1.2);
+    border-color: var(--fluorescent-yellow);
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 15px;
+    background: var(--deep-space-purple);
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: var(--electric-pink);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: var(--electric-pink);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.action-button { /* Removed as action buttons are removed */
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--lime-green);
+    color: var(--bg-color);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.action-button:hover { /* Removed as action buttons are removed */
+    background-color: var(--fluorescent-yellow);
+    box-shadow: 0 0 10px var(--fluorescent-yellow);
+}
+
+
+@media (max-width: 768px) {
+    .custom-controls {
+        width: 100%;
+    }
+}

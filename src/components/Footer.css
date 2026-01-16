@@ -1,0 +1,57 @@
+/* Footer.css */
+footer {
+    background-color: #1a1a2e;
+    padding: 2rem;
+    border-top: 2px solid var(--deep-space-purple);
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.newsletter-form input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 2px solid var(--deep-space-purple);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    min-width: 0;
+}
+
+.newsletter-form button {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--lime-green);
+    color: #1a1a2e;
+    font-family: var(--font-heading);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: var(--fluorescent-yellow);
+}
+
+@media (max-width: 768px) {
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+        max-width: 300px;
+    }
+}

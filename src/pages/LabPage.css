@@ -1,0 +1,124 @@
+/* LabPage.css */
+.lab-page {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.lab-section {
+    margin-bottom: 3rem;
+    background-color: rgba(26, 26, 46, 0.5);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--deep-space-purple);
+}
+
+.lab-section h2 {
+    border-bottom: 2px solid var(--lime-green);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.lab-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.lab-section li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    border-left: 3px solid var(--electric-pink);
+}
+
+.diagram-container, .qr-code-container {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: var(--bg-color);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px dashed var(--lime-green);
+    animation: border-flicker 5s infinite;
+}
+
+.phase-space-4d, .gumbo-3d {
+    padding: 1rem;
+    border-radius: 50%;
+    font-family: var(--font-heading);
+}
+
+.phase-space-4d {
+    background-color: var(--electric-pink);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--electric-pink);
+    animation: pulse 3s infinite ease-in-out;
+}
+
+.gumbo-3d {
+    background-color: var(--lime-green);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--lime-green);
+}
+
+.arrow {
+    font-family: var(--font-body);
+    font-weight: 700;
+    color: var(--fluorescent-yellow);
+    animation: flow 2s infinite linear;
+}
+
+.diagram-caption {
+    margin-top: 1rem;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.qr-code-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: var(--font-body);
+    font-weight: 700;
+    border: 5px solid white;
+}
+
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 20px var(--electric-pink); }
+    50% { box-shadow: 0 0 35px var(--electric-pink); }
+    100% { box-shadow: 0 0 20px var(--electric-pink); }
+}
+
+@keyframes flow {
+    0% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(-5px); }
+}
+
+@keyframes border-flicker {
+    0% { border-color: var(--lime-green); }
+    50% { border-color: var(--fluorescent-yellow); }
+    100% { border-color: var(--lime-green); }
+}
+
+
+@media (max-width: 768px) {
+    .lab-section {
+        padding: 1.5rem;
+    }
+
+    .diagram {
+        flex-direction: column;
+    }
+}

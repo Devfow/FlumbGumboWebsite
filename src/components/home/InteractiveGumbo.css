@@ -1,0 +1,58 @@
+/* C:/Users/devfo/flumb-gumbo-website/src/components/InteractiveGumbo.css */
+.interactive-gumbo-container {
+  display: flex;
+  gap: 20px;
+  height: 500px;
+  width: 100%;
+  background-color: #f0f8ff;
+  border-radius: 15px;
+  margin-bottom: 2rem;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative; /* Added for positioning toggle button */
+}
+
+.canvas-container {
+    flex: 1;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    min-width: 0; /* Prevents flexbox overflow */
+}
+
+.toggle-controls-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--electric-pink);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: var(--font-body);
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-controls-button:hover {
+    background-color: var(--fluorescent-yellow);
+    color: var(--bg-color);
+}
+
+@media (max-width: 768px) {
+    .interactive-gumbo-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .canvas-container {
+        height: 300px;
+    }
+
+    .toggle-controls-button {
+        position: static; /* Adjust position for mobile */
+        margin-top: 10px;
+    }
+}
+

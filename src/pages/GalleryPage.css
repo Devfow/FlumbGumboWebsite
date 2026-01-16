@@ -1,0 +1,100 @@
+/* GalleryPage.css */
+.gallery-page {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+    background-color: rgba(26, 26, 46, 0.5);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border: 1px solid var(--deep-space-purple);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+}
+
+.specimen-display {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    border: 2px solid var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.specimen-display.glow {
+    box-shadow: 0 0 20px var(--lime-green);
+}
+
+.specimen-display.translucent {
+    backdrop-filter: blur(5px);
+    border: 2px dashed var(--text-color);
+}
+
+.specimen-display.golden {
+    box-shadow: 0 0 30px var(--fluorescent-yellow);
+    border-color: var(--fluorescent-yellow);
+}
+
+.specimen-display.mystery {
+    background: repeating-radial-gradient(
+        circle,
+        var(--deep-space-purple),
+        var(--deep-space-purple) 10px,
+        #000000 10px,
+        #000000 20px
+    );
+    animation: mystery-scroll 10s linear infinite;
+}
+
+.mystery-text {
+    font-family: var(--font-heading);
+    font-size: 5rem;
+    color: var(--fluorescent-yellow);
+    text-shadow: 0 0 15px var(--fluorescent-yellow);
+}
+
+@keyframes mystery-scroll {
+    0% { background-position: 0 0; }
+    100% { background-position: -200px -200px; }
+}
+
+.gallery-item h3 {
+    margin-bottom: 0.5rem;
+}
+
+.rarity {
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.rarity.common {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.rarity.rare {
+    background-color: var(--lime-green);
+    color: var(--bg-color);
+}
+
+.rarity.ultra-rare {
+    background: linear-gradient(45deg, var(--electric-pink), var(--fluorescent-yellow));
+    color: var(--bg-color);
+    font-family: var(--font-heading);
+}

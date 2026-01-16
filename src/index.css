@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  --electric-pink: #ff1493;
+  --lime-green: #32cd32;
+  --fluorescent-yellow: #ccff00;
+  --deep-space-purple: #483d8b;
+  --text-color: #f0f8ff;
+  --bg-color: #1a1a2e;
+
+  --font-heading: 'Righteous', cursive;
+  --font-body: 'Space Mono', monospace;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.phase-space-gradient {
+  background: linear-gradient(45deg, var(--deep-space-purple), var(--electric-pink), var(--lime-green));
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--fluorescent-yellow);
+  text-shadow: 0 0 5px var(--electric-pink);
+}
+
+a {
+  color: var(--lime-green);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--fluorescent-yellow);
+}
